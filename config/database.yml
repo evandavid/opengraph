@@ -16,7 +16,7 @@ development:
   pool: 5
   username: evandavid
   password: arnans
-  socket: /tmp/mysql.sock
+ # socket: /tmp/mysql.sock
   host: sql09.freemysql.net
 
 # Warning: The database defined as "test" will be erased and
@@ -30,7 +30,7 @@ test:
   pool: 5
   username: evandavid
   password: arnans
-  socket: /tmp/mysql.sock
+ # socket: /tmp/mysql.sock
   http://sql09.freemysql.net
 
 production:
@@ -41,5 +41,5 @@ production:
   pool: 5
   username: evandavid
   password: arnans
-  socket: /tmp/mysql.sock
+#  socket: /tmp/mysql.sock
   http://sql09.freemysql.net

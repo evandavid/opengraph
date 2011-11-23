@@ -1,4 +1,6 @@
 Semantic::Application.routes.draw do
+  get "dashboards/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
