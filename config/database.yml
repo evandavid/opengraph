@@ -12,11 +12,12 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: evandavid_semantics
+  database: semantic
   pool: 5
   username: evandavid
   password: arnans
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
+  host: sql09.freemysql.net
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,18 +26,20 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: evandavid_semantics
+  database: semantic
   pool: 5
   username: evandavid
   password: arnans
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
+  http://sql09.freemysql.net
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: evandavid_semantics
+  database: semantic
   pool: 5
   username: evandavid
   password: arnans
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
+  http://sql09.freemysql.net
