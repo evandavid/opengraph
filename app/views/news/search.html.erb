@@ -1,6 +1,29 @@
+<script type="text/stylesheet" >
+.images {
+	float:left;
+	margin:0 5px 0 0;
+}
+</script>
+
+
+
+
 <% @news.each do |n|%>
-	<h2><%=link_to n["title"],n["unescapedUrl"] %></h2>
-	<p><%=raw n["content"]%><p>
-	<p> <a href=<%="#{n["unescapedUrl"]}"%> ><%=raw n["publisher"]%></a>-<%=Time.parse(n["publishedDate"]).to_date %></p>
+	<h2><%=link_to n["titleNoFormatting"],n["unescapedUrl"] %> (<small> <a href=<%="#{n["unescapedUrl"]}"%> ><%=raw n["publisher"]%></a></small> )</h2>
+	<p><%=Time.parse(n["publishedDate"]) %></p>
+	<div class="images">
+		<%if n["image"].size > 0%>
+			<%= image_tag n["image"]["url"], :width => "150px"%>
+		<%end%>
+	</div>
+	<p style="float: left"><%=raw n["content"]%><p>
+	<%if n["relatedStories"].size > 0%>
+		<h3>Related Stories</h3>
+		<%n["relatedStories"].each do |k|%>
+			<ul>
+				<li><%=link_to k["titleNoFormatting"],k["unescapedUrl"] %> (<small> <a href=<%="#{k["unescapedUrl"]}"%> ><%=raw k["publisher"]%></a></small> )</h3></li>
+			</ul>
+		<%end%>
+	<%end%>
 	<br />
 <%end%>
