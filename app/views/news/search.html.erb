@@ -1,0 +1,6 @@
+<% @news.each do |n|%>
+	<h2><%=raw n["title"]%></h2>
+	<p><%=raw n["content"]%><p>
+	<p> <a href=<%="#{n["unescapedUrl"]}"%> ><%=raw n["publisher"]%></a>-<%=raw n["publishedDate"]%></p>
+	<br />
+<%end%>

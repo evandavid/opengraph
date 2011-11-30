@@ -1,5 +1,9 @@
 Semantic::Application.routes.draw do
+  get "news/index"
+
   resources :dashboards
+  resources :news
+  match 'news/search' => 'news#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

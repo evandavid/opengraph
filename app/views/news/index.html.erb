@@ -1,0 +1,4 @@
+<%= form_for :search, :url => news_search_path do |f|%>
+	<%=f.text_field :keyword %>
+	<%=f.submit 'Submit'%>
+<%end%>
