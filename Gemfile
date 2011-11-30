@@ -9,6 +9,10 @@ gem 'mysql2'
 
 gem 'json'
 
+require 'net/http'
+
+require 'uri'
+
 gem 'execjs'
 
 gem 'therubyracer'

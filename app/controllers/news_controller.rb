@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
 	require 'net/http'
-
+	require 'time'
 
   def index
   	
