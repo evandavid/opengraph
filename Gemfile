@@ -11,7 +11,9 @@ gem 'json'
 
 require 'net/http'
 
-require 'uri'
+require 'net/https'
+
+require 'uri' 
 
 gem 'execjs'
 
