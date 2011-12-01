@@ -1,20 +1,6 @@
-   <style type="text/css">
-  
-    .outerDiv {
-    width:100%;
-    padding:5px 2px 5px 2px;
-    }
-  
-    .innerDiv {
-    width: 95%;
-    margin: 0px auto;
-    }
-  
-    </style>
-
-    <div class="outerDiv">
-        <div class="innerDiv">
-            	<img src="/images/launching-soon.gif" alt="Soon" >
-        </div>
-    </div>
-  
+<%unless @friends.nil?%>
+<%@friends.each do |p|%>
+<%=p.name%>
+<br />
+<%end%>
+<%end%>
