@@ -15,6 +15,8 @@ require 'net/https'
 
 require 'uri' 
 
+require 'open-uri'
+
 gem 'execjs'
 
 gem 'therubyracer'

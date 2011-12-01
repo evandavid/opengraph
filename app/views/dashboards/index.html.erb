@@ -1,0 +1,16 @@
+<%unless @friends.nil?%>
+<h3>Latest Friends Status</h3>
+<ul>
+<%@friends.each do |p|%>
+<%unless p["message"].blank?%>
+<li>
+	<ul>
+		<li><img src="https://graph.facebook.com/<%= p["from"]["id"].to_s %>/picture"/> <%=p["from"]["name"]%></li>
+		<li><strong>Status</strong> - <%= raw p["message"]%></li>
+	</ul>
+</li>
+<%end%>
+<br />
+<%end%>
+</ul>
+<%end%>

@@ -7,12 +7,13 @@
 <body>
 <%= fb_connect_async_js %>
 
-<% unless current_facebook_user.nil?%>  
-<%= "Welcome #{current_facebook_user.name} !" %>
+<% unless current_facebook_user.nil?%>
+<img src="https://graph.facebook.com/<%= dash["id"].to_s %>/picture"/>
+<%= "Welcome #{dash["name"]} !" %>
 
 <%= fb_logout_link("Logout of fb", request.url) %><br />
 <% else  %>
-<%= fb_login_and_redirect('dashboards', :perms => 'email') %>
+<%= fb_login_and_redirect('dashboards', :perms => 'email,read_stream') %>
 <% end %>
 <%= yield %>
 
