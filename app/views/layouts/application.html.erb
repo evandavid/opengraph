@@ -7,7 +7,7 @@
 <body>
 <%= fb_connect_async_js %>
 
-<% unless current_facebook_user.nil?%>
+<% if current_facebook_user%>
 <img src="https://graph.facebook.com/<%= dash["id"].to_s %>/picture"/>
 <%= "Welcome #{dash["name"]} !" %>
 
