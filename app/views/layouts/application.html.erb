@@ -7,7 +7,7 @@
 <body>
 <%= fb_connect_async_js %>
 
-<% if current_facebook_user %>  
+<% unless current_facebook_user.nil?%>  
 <% current_facebook_user.fetch %>
 
   <img src="https://graph.facebook.com/<%= current_facebook_user.id.to_s %>/picture"/>

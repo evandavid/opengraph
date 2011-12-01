@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
   def index
-  	if current_facebook_user
+  	unless current_facebook_user.nil?
   		@friends=current_facebook_user.friends
   	end
   end
